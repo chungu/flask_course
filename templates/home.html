@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+'<h1> Hello {{ name }}, You are on the home page </h1>'
+
+<h1>Database Results!</h1>
+{% for x in results %}
+<h3>ID:{{ x.id }} Name:{{ x.name }} Location:{{ x.location}}</h3>
+{% endfor %}
+
+
+
+{% if display %}
+<h2>This is being displayed</h2>
+
+{% else %}
+<h2>This is being displayed</h2>
+
+{% endif %}
+
+{% for x in mylist%}
+<h3>{{ x }}</h3>
+{% endfor %}
+
+<img src="{{ url_for('static', filename = 'images/icon.png')}}">
+
+{% endblock %}
